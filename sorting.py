@@ -59,11 +59,13 @@ def insertion_sort(ciselny_seznam):
     """
     n = len(ciselny_seznam)
     for i in range(1, n):
+        neco = 0
+        while neco < n and ciselny_seznam[i - 1] > ciselny_seznam[i]:
+            ciselny_seznam[i - 1], ciselny_seznam[i] = ciselny_seznam[i - 1], ciselny_seznam[i]
+            neco += 1
+    return ciselny_seznam
 
-
-
-
-
+##########
 
 def main():
    my_data = read_data('numbers.csv')
