@@ -40,6 +40,27 @@ def selection_sort(seznam):
 
 ##########
 def bubble_sort(seznam_cisel):
+    """
+    :param seznam_cisel:
+    :return:
+    """
+    n = len(seznam_cisel)
+    for i in range(n - 1):
+        for idx in range(n - i - 1):
+            if seznam_cisel[idx] > seznam_cisel[idx + 1]:
+                seznam_cisel[i], seznam_cisel[i + 1] = seznam_cisel[i + 1], seznam_cisel[i]
+    return seznam_cisel
+
+##########
+def insertion_sort(ciselny_seznam):
+    """
+    :param ciselny_seznam:
+    :return:
+    """
+    n = len(ciselny_seznam)
+    for i in range(1, n):
+
+
 
 
 
@@ -49,6 +70,10 @@ def main():
    print(my_data['series_1'])
    selection_sort_result = selection_sort(my_data['series_1'])
    print(selection_sort_result)
+   bubble_sort_result = bubble_sort(my_data['series_1'])
+   print(bubble_sort_result )
+   insertion_sort_result = insertion_sort(my_data['series_1'])
+   print(insertion_sort_result)
 
 
 if __name__ == '__main__':
